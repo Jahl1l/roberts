@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ink: 11 18 32;
+  --color-sand: 247 242 233;
+  --color-ocean: 0 95 115;
+  --color-sunrise: 238 155 0;
+  --color-palm: 10 147 150;
+  --color-coral: 187 62 3;
+  color-scheme: light;
+}
+
+.dark {
+  --color-ink: 234 241 252;
+  --color-sand: 9 14 22;
+  --color-ocean: 105 211 218;
+  --color-sunrise: 255 196 99;
+  --color-palm: 80 195 190;
+  --color-coral: 255 149 107;
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-sand text-ink font-body antialiased;
+}
+
+section {
+  scroll-margin-top: 96px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease both;
+}
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-float-in {
+  animation: float-in 0.8s ease both;
+}
+
+.gradient-panel {
+  background: linear-gradient(
+    160deg,
+    rgb(var(--color-ink) / 0.06),
+    rgb(var(--color-sand) / 0.95)
+  );
+  border: 1px solid rgb(var(--color-ink) / 0.12);
+  box-shadow: 0 24px 80px -60px rgb(var(--color-ink) / 0.5);
+}
+
+.pattern-grid {
+  background-image: radial-gradient(rgb(var(--color-ocean) / 0.14) 1px, transparent 1px);
+  background-size: 120px 120px;
+}
+
+.input-field {
+  @apply w-full rounded-2xl border border-ink/10 bg-white/90 px-4 py-3 text-sm text-ink shadow-sm focus:border-ocean focus:outline-none focus:ring-2 focus:ring-ocean/20 dark:border-ink/20 dark:bg-ink/10;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full bg-ocean/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-ocean dark:bg-ocean/20;
+}
+
+.dark .bg-white\/55 {
+  background-color: rgb(var(--color-ink) / 0.16);
+}
+
+.dark .bg-white\/70,
+.dark .bg-white\/80,
+.dark .bg-white\/90,
+.dark .bg-white\/95 {
+  background-color: rgb(var(--color-ink) / 0.24);
+}
+
+.dark .bg-sand\/70,
+.dark .bg-sand\/80,
+.dark .bg-sand\/90 {
+  background-color: rgb(var(--color-ink) / 0.2);
+}
+
+.dark .border-ink\/10 {
+  border-color: rgb(var(--color-ink) / 0.24);
+}
+
+.dark .text-ink\/70 {
+  color: rgb(var(--color-ink) / 0.9);
+}
+
+.dark .text-ink\/60 {
+  color: rgb(var(--color-ink) / 0.82);
+}
+
+.dark .bg-sunrise-fade {
+  background-image: linear-gradient(
+    135deg,
+    rgb(var(--color-sunrise) / 0.22),
+    rgb(var(--color-coral) / 0.18)
+  );
+}
