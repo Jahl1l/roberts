@@ -8,8 +8,7 @@ export default function PortfolioPage() {
     <div>
       <Section
         eyebrow="Portfolio"
-        title="Proof of impact across Jamaican industries"
-        subtitle="These case studies show how we turn manual processes into automated systems."
+        title="Business Systems We've Built"
       >
         <div className="grid gap-6 md:grid-cols-2">
           {CASE_STUDIES.map((study) => (

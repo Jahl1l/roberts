@@ -199,13 +199,6 @@ export const CASE_STUDIES = [
     demoUrl: "https://demo-bakery-booking-system-i9ta.vercel.app/"
   },
   {
-    title: "Lush Glow Beauty Salon",
-    industry: "Beauty & Wellness",
-    problem: "Stylists lost bookings and reminders lived in WhatsApp threads.",
-    solution: "Custom booking system with deposits, SMS reminders, and staff scheduling.",
-    results: "42% fewer no-shows and 2x faster front-desk response times."
-  },
-  {
     title: "SwiftShip Logistics Platform",
     industry: "Shipping & Logistics",
     problem:
