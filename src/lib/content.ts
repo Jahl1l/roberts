@@ -84,7 +84,7 @@ export const SOLUTIONS = [
 export const PACKAGES = [
   {
     name: "Starter System",
-    price: "50K-60K JMD",
+    price: "80K-100K JMD",
     description: "Launch-ready web app for a single workflow or service line.",
     features: [
       "Discovery session + process mapping",
