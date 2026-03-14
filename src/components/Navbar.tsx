@@ -3,11 +3,10 @@ import Link from "next/link";
 import Button from "./Button";
 import ThemeToggle from "./ThemeToggle";
 import { NAV_LINKS, SITE } from "@/lib/content";
+import { getWhatsAppHref } from "@/lib/whatsapp";
 
 export default function Navbar() {
-  const whatsappHref = `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(
-    SITE.whatsappMessage
-  )}`;
+  const whatsappHref = getWhatsAppHref(SITE.whatsappNumber, SITE.whatsappMessage);
 
   return (
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-sand/90 backdrop-blur">

@@ -5,6 +5,7 @@ import PricingCard from "@/components/PricingCard";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import FAQItem from "@/components/FAQItem";
 import ContactForm from "@/components/ContactForm";
+import { getWhatsAppHref } from "@/lib/whatsapp";
 import {
   CASE_STUDIES,
   DIFFERENTIATORS,
@@ -18,9 +19,7 @@ import {
 } from "@/lib/content";
 
 export default function HomePage() {
-  const whatsappHref = `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(
-    SITE.whatsappMessage
-  )}`;
+  const whatsappHref = getWhatsAppHref(SITE.whatsappNumber, SITE.whatsappMessage);
 
   return (
     <div>

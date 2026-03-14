@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { NAV_LINKS, SITE } from "@/lib/content";
+import { getWhatsAppHref } from "@/lib/whatsapp";
 
 export default function Footer() {
-  const whatsappHref = `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(
-    SITE.whatsappMessage
-  )}`;
+  const whatsappHref = getWhatsAppHref(SITE.whatsappNumber, SITE.whatsappMessage);
 
   return (
     <footer className="border-t border-ink/10 bg-white/70 dark:bg-ink/5">

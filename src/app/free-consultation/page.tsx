@@ -2,11 +2,10 @@ import Link from "next/link";
 import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
 import { CARE_PLANS, PACKAGES, SITE } from "@/lib/content";
+import { getWhatsAppHref } from "@/lib/whatsapp";
 
 export default function FreeConsultationPage() {
-  const whatsappHref = `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(
-    SITE.whatsappMessage
-  )}`;
+  const whatsappHref = getWhatsAppHref(SITE.whatsappNumber, SITE.whatsappMessage);
 
   return (
     <div>

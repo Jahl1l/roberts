@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Roberts Web Applications",
-  phone: "+1876XXXXXXX",
-  whatsappNumber: "1876XXXXXXX",
+  phone: "+1 876-804-8800",
+  whatsappNumber: "18768048800",
   whatsappMessage:
     "Hi Roberts Web Applications, I want a web application for my business. Can we discuss?",
   location: "Kingston, Jamaica",
