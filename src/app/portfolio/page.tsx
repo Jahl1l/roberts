@@ -8,7 +8,8 @@ export default function PortfolioPage() {
     <div>
       <Section
         eyebrow="Portfolio"
-        title="Business Systems We've Built"
+        title="Systems That Turn Manual Work Into Scalable Operations"
+        subtitle="Each project shows how Roberts IT helps businesses replace slow, manual processes with software that improves visibility, speeds up execution, and supports growth."
       >
         <div className="grid gap-6 md:grid-cols-2">
           {CASE_STUDIES.map((study) => (

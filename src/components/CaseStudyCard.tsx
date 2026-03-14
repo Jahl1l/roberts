@@ -25,13 +25,13 @@ export default function CaseStudyCard({
       <h3 className="mt-3 font-heading text-xl font-semibold text-ink">{title}</h3>
       <div className="mt-4 space-y-3 text-sm text-ink/70">
         <p>
-          <span className="font-semibold text-ink">Problem:</span> {problem}
+          <span className="font-semibold text-ink">Challenge:</span> {problem}
         </p>
         <p>
-          <span className="font-semibold text-ink">Solution:</span> {solution}
+          <span className="font-semibold text-ink">System:</span> {solution}
         </p>
         <p>
-          <span className="font-semibold text-ink">Results:</span> {results}
+          <span className="font-semibold text-ink">Outcome:</span> {results}
         </p>
       </div>
       {demoUrl ? (
