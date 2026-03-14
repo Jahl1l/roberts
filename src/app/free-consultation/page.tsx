@@ -2,9 +2,10 @@ import Link from "next/link";
 import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
 import { CARE_PLANS, PACKAGES, SITE } from "@/lib/content";
+import { getWhatsAppHref } from "@/lib/whatsapp";
 
 export default function FreeConsultationPage() {
-  const emailHref = `mailto:${SITE.email}`;
+  const whatsappHref = getWhatsAppHref(SITE.whatsappNumber, SITE.whatsappMessage);
 
   return (
     <div>
@@ -18,7 +19,7 @@ export default function FreeConsultationPage() {
               </h1>
               <p className="text-base text-ink/70 md:text-lg">
                 Share your goals and we&apos;ll recommend the best package, timeline,
-                and next steps. Expect a quick email follow-up within 2 hours.
+                and next steps. Expect a quick WhatsApp follow-up within 2 hours.
               </p>
               <div className="rounded-3xl border border-ink/10 bg-white/90 p-6 text-sm text-ink/70">
                 <p className="font-semibold text-ink">What you&apos;ll get</p>
@@ -29,10 +30,12 @@ export default function FreeConsultationPage() {
               </ul>
               </div>
               <Link
-                href={emailHref}
+                href={whatsappHref}
                 className="inline-flex rounded-full bg-ocean px-6 py-3 text-sm font-semibold text-white"
+                target="_blank"
+                rel="noreferrer"
               >
-                Email Us
+                WhatsApp Us
               </Link>
             </div>
             <div className="rounded-3xl border border-ink/10 bg-white/95 p-6 shadow-soft">
@@ -65,7 +68,7 @@ export default function FreeConsultationPage() {
       <Section
         eyebrow="Tell us about your project"
         title="We&apos;ll respond with a clear plan"
-        subtitle="Complete the form and we&apos;ll prepare an email to jahlilaroberts@gmail.com with your project details."
+        subtitle="Complete the form and we&apos;ll open WhatsApp with your project details ready to send."
       >
         <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr]">
           <div className="space-y-6 text-sm text-ink/70">
@@ -73,7 +76,7 @@ export default function FreeConsultationPage() {
               <p className="font-semibold text-ink">Best fit for</p>
               <ul className="mt-3 list-disc space-y-2 pl-4">
                 <li>Teams ready to streamline bookings or orders</li>
-                <li>Businesses scaling beyond manual spreadsheets</li>
+                <li>Businesses scaling beyond WhatsApp spreadsheets</li>
                 <li>Owners who want clear, local support</li>
               </ul>
             </div>
