@@ -5,9 +5,9 @@ import Link from "next/link";
 import { SITE } from "@/lib/content";
 
 const BUDGET_OPTIONS = [
-  "180K-250K JMD",
-  "300K-500K JMD",
-  "600K-1M+ JMD",
+  "80K-120K JMD",
+  "180K-300K JMD",
+  "450K-850K+ JMD",
   "Not sure yet"
 ];
 

@@ -84,30 +84,30 @@ export const SOLUTIONS = [
 export const PACKAGES = [
   {
     name: "Starter System",
-    price: "80K-100K JMD",
-    description: "Launch-ready web app for a single workflow or service line.",
+    price: "80K-120K JMD",
+    description: "Focused web app for one core workflow with a fast path to launch.",
     features: [
       "Discovery session + process mapping",
       "Branded UI + mobile-first experience",
-      "Core workflow automation",
+      "Single workflow automation",
       "Basic analytics + support training"
     ]
   },
   {
     name: "Business Growth System",
-    price: "300K-500K JMD",
-    description: "Full customer journey built end-to-end for growing teams.",
+    price: "180K-300K JMD",
+    description: "Broader operational system for teams that need multiple connected workflows.",
     features: [
       "Multi-step automation + notifications",
       "Admin dashboard + reporting",
-      "Payments or deposits integration",
+      "Payments, deposits, or lead capture integration",
       "Launch + optimization support"
     ]
   },
   {
     name: "Custom Enterprise System",
-    price: "600K-1M+ JMD",
-    description: "Complex systems, multi-location operations, or regulated workflows.",
+    price: "450K-850K+ JMD",
+    description: "Custom platform for complex operations, integrations, or multi-team environments.",
     features: [
       "Custom integrations + API connections",
       "Role-based access + approvals",
