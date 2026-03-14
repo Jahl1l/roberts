@@ -127,7 +127,7 @@ export default function ContactForm() {
           <input
             className="input-field"
             name="contact"
-            placeholder="Email or phone"
+            placeholder="Phone number"
             value={formData.contact}
             onChange={handleChange}
           />
