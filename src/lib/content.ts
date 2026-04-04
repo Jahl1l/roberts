@@ -5,7 +5,7 @@ export const SITE = {
   whatsappMessage:
     "Hi Roberts Web Applications, I want a web application for my business. Can we discuss?",
   location: "Kingston, Jamaica",
-  email: "hello@robertswebapps.com"
+  email: "jahlilaroberts@gmail.com"
 };
 
 export const NAV_LINKS = [
@@ -21,7 +21,7 @@ export const DIFFERENTIATORS = [
   {
     title: "Built for Jamaican businesses",
     description:
-      "We design around local operations, WhatsApp-first customer habits, and JMD pricing realities."
+      "We design around local operations, customer communication habits, and JMD pricing realities."
   },
   {
     title: "Clear communication + fast support",
@@ -35,9 +35,17 @@ export const DIFFERENTIATORS = [
   }
 ];
 
+export const CURRENT_CUSTOMERS = [
+  {
+    name: "Hooks Jamaica",
+    logoSrc: "/customers/hooks-jamaica.png",
+    logoAlt: "Hooks Jamaica logo"
+  }
+];
+
 export const PROBLEMS = [
   {
-    title: "WhatsApp chaos",
+    title: "Message chaos",
     description:
       "Too many chats, missed messages, and no clear record of orders or bookings."
   },
@@ -77,42 +85,61 @@ export const SOLUTIONS = [
   },
   {
     title: "Internal tools",
-    description: "Custom tools that connect WhatsApp, spreadsheets, and your team."
+    description: "Custom tools that connect email, spreadsheets, and your team."
   }
 ];
 
 export const PACKAGES = [
   {
-    name: "Starter System",
-    price: "80K-120K JMD",
-    description: "Focused web app for one core workflow with a fast path to launch.",
+    name: "Starter Package",
+    price: "JMD $40,000-$100,000",
+    description:
+      "A practical launch package for new and small businesses that need a polished online presence without overbuilding.",
     features: [
-      "Discovery session + process mapping",
-      "Branded UI + mobile-first experience",
-      "Single workflow automation",
-      "Basic analytics + support training"
+      "1-3 page website",
+      "Mobile-friendly design",
+      "Contact form",
+      "Basic SEO setup",
+      "WhatsApp or email contact button",
+      "1 revision round"
     ]
   },
   {
-    name: "Business Growth System",
-    price: "180K-300K JMD",
-    description: "Broader operational system for teams that need multiple connected workflows.",
+    name: "Business Package",
+    price: "JMD $120,000-$180,000",
+    description:
+      "Designed for growing companies that need a stronger brand presentation, more pages, and the core integrations customers expect.",
+    isPopular: true,
     features: [
-      "Multi-step automation + notifications",
-      "Admin dashboard + reporting",
-      "Payments, deposits, or lead capture integration",
-      "Launch + optimization support"
+      "Up to 5 pages",
+      "Custom design",
+      "Mobile-friendly design",
+      "Contact form",
+      "Basic SEO setup",
+      "Social media links integration",
+      "WhatsApp chat integration",
+      "Google Maps integration",
+      "2 revision rounds"
     ]
   },
   {
-    name: "Custom Enterprise System",
-    price: "450K-850K+ JMD",
-    description: "Custom platform for complex operations, integrations, or multi-team environments.",
+    name: "Premium Package",
+    price: "JMD $200,000-$260,000",
+    description:
+      "Built for businesses ready to invest in a more competitive digital presence with deeper content, performance, and post-launch support.",
     features: [
-      "Custom integrations + API connections",
-      "Role-based access + approvals",
-      "Security + compliance reviews",
-      "Dedicated product strategy"
+      "Up to 8 pages",
+      "Custom premium design",
+      "Mobile-friendly design",
+      "Contact forms",
+      "Advanced SEO setup",
+      "Social media integration",
+      "WhatsApp chat integration",
+      "Google Maps integration",
+      "Blog or portfolio section",
+      "Speed optimization",
+      "3 revision rounds",
+      "1 month of support after launch"
     ]
   }
 ];
@@ -230,7 +257,7 @@ export const SERVICE_LIST = [
   {
     title: "Automation & Integrations",
     description:
-      "Payments, WhatsApp workflows, analytics, and third-party tools."
+      "Payments, email workflows, analytics, and third-party tools."
   },
   {
     title: "Launch & Training",

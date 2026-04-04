@@ -3,11 +3,13 @@ import Button from "@/components/Button";
 import Section from "@/components/Section";
 import PricingCard from "@/components/PricingCard";
 import CaseStudyCard from "@/components/CaseStudyCard";
+import CustomerLogoCard from "@/components/CustomerLogoCard";
 import FAQItem from "@/components/FAQItem";
 import ContactForm from "@/components/ContactForm";
 import { getWhatsAppHref } from "@/lib/whatsapp";
 import {
   CASE_STUDIES,
+  CURRENT_CUSTOMERS,
   DIFFERENTIATORS,
   FAQS,
   PACKAGES,
@@ -26,8 +28,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-hero-glow">
         <div className="pattern-grid absolute inset-0 opacity-40" />
         <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-20 md:py-28">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="space-y-6">
+          <div className="space-y-6">
               <span className="badge">Jamaican Web App Development</span>
               <h1 className="text-balance font-heading text-4xl font-semibold text-ink md:text-5xl">
                 Custom Web Applications for Jamaican Businesses
@@ -61,34 +62,22 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-            </div>
-            <div className="animate-float-in rounded-3xl bg-white/90 p-6 shadow-soft">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ocean">
-                Trusted by Jamaican businesses
-              </p>
-              <div className="mt-6 grid grid-cols-2 gap-4 text-sm text-ink/60 md:grid-cols-3">
-                {["Island Eats", "Kingston Realty", "Harborlight", "Sunrise Spa", "Blue Ridge", "Coastal Tours"].map(
-                  (logo) => (
-                    <div
-                      key={logo}
-                      className="flex items-center justify-center rounded-2xl border border-dashed border-ink/20 bg-sand/70 px-3 py-6"
-                    >
-                      {logo}
-                    </div>
-                  )
-                )}
-              </div>
-              <div className="mt-8 rounded-2xl bg-sunrise-fade p-5 text-sm text-ink/80">
-                <p className="font-semibold text-ink">Fast response time</p>
-                <p className="mt-2">
-                  Expect replies within 2 business hours and weekly delivery
-                  updates once your project starts.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="Current customers"
+        title="Businesses we currently support"
+        subtitle="A snapshot of companies trusting Roberts Web Applications with their digital systems."
+        className="bg-white/70"
+      >
+        <div className="flex flex-wrap justify-center gap-6">
+          {CURRENT_CUSTOMERS.map((customer) => (
+            <CustomerLogoCard key={customer.name} {...customer} />
+          ))}
+        </div>
+      </Section>
 
       <Section
         eyebrow="Problems we solve"
@@ -135,8 +124,8 @@ export default function HomePage() {
 
       <Section
         eyebrow="Packages"
-        title="Flexible systems with transparent JMD pricing"
-        subtitle="Select a package that fits your stage, then customize the scope during discovery."
+        title="Website packages built to match your business stage"
+        subtitle="Choose a package with clear JMD pricing, polished design, and the right launch scope for your company."
         className="relative overflow-hidden"
       >
         <div className="relative">
