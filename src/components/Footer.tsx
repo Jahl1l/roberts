@@ -12,7 +12,7 @@ export default function Footer() {
           <h3 className="font-heading text-xl font-semibold">{SITE.name}</h3>
           <p className="text-sm text-ink/70">
             Custom web applications for Jamaican businesses. Built to streamline
-            WhatsApp workflows, reduce manual work, and grow revenue.
+            key workflows, reduce manual work, and grow revenue.
           </p>
           <div className="text-sm text-ink/70">
             <p>{SITE.location}</p>
@@ -34,8 +34,8 @@ export default function Footer() {
         <div className="space-y-3 text-sm">
           <p className="font-semibold text-ink">Let&apos;s talk</p>
           <p className="text-ink/70">
-            Ready to quote your next system? Send us a WhatsApp message or use the
-            contact form.
+            Ready to quote your next system? Send us a WhatsApp message or use the contact
+            form.
           </p>
           <Link
             href={whatsappHref}

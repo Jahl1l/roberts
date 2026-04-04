@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Roberts Web Applications",
     description:
-      "Custom web applications for Jamaican businesses. WhatsApp-first workflows, JMD pricing, and fast support.",
+      "Custom web applications for Jamaican businesses. Email-first workflows, JMD pricing, and fast support.",
     url: "https://robertswebapps.com",
     siteName: "Roberts Web Applications",
     locale: "en_JM",

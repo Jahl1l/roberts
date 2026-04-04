@@ -8,8 +8,8 @@ export default function PackagesPage() {
     <div>
       <Section
         eyebrow="Packages"
-        title="Transparent JMD pricing with flexible scope"
-        subtitle="Every package starts with discovery so we can match the system to your business goals."
+        title="Professional website packages with clear JMD pricing"
+        subtitle="Each package is structured to help you launch confidently, look credible online, and scale with the right level of support."
       >
         <div className="grid gap-6 lg:grid-cols-3">
           {PACKAGES.map((pkg) => (

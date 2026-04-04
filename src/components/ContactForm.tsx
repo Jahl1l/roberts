@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { SITE } from "@/lib/content";
-import { getWhatsAppHref } from "@/lib/whatsapp";
 
 const BUDGET_OPTIONS = [
   "80K-120K JMD",
@@ -74,9 +73,8 @@ export default function ContactForm() {
 
     try {
       setStatus("loading");
-      const message = [
-        "Hi Roberts Web Applications, I want a web application for my business.",
-        "",
+      const subject = `New Web App Request - ${formData.businessName}`;
+      const body = [
         `Name: ${formData.name}`,
         `Business Name: ${formData.businessName}`,
         `Contact: ${formData.contact}`,
@@ -84,9 +82,9 @@ export default function ContactForm() {
         `Budget: ${formData.budget}`,
         `Timeline: ${formData.timeline}`
       ].join("\n");
-      const whatsappHref = getWhatsAppHref(SITE.whatsappNumber, message);
+      const emailHref = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-      window.open(whatsappHref, "_blank", "noopener,noreferrer");
+      window.location.href = emailHref;
       setStatus("success");
       setFormData(initialState);
     } catch (error) {
@@ -127,7 +125,7 @@ export default function ContactForm() {
           <input
             className="input-field"
             name="contact"
-            placeholder="Phone number"
+            placeholder="Email or phone"
             value={formData.contact}
             onChange={handleChange}
           />
@@ -190,17 +188,17 @@ export default function ContactForm() {
           className="w-full rounded-full bg-ocean px-6 py-3 text-sm font-semibold text-white transition hover:bg-ink disabled:opacity-60"
           disabled={status === "loading"}
         >
-          {status === "loading" ? "Opening WhatsApp..." : "Send on WhatsApp"}
+          {status === "loading" ? "Preparing email..." : "Send request"}
         </button>
       </form>
       {status === "success" ? (
         <div className="mt-4 rounded-2xl bg-palm/10 p-4 text-sm text-ink">
-          WhatsApp was opened with your project details. Send the message to reach us directly.
+          Thanks! Your email draft was prepared to send to {SITE.email}.
         </div>
       ) : null}
       {status === "error" ? (
         <div className="mt-4 rounded-2xl bg-coral/10 p-4 text-sm text-ink">
-          Something went wrong. Please try again on WhatsApp at {SITE.phone}.
+          Something went wrong. Please try again or email {SITE.email}.
         </div>
       ) : null}
     </div>

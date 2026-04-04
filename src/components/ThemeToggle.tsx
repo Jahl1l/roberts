@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
 
-function getPreferredTheme(): Theme {
+function getStoredTheme(): Theme | null {
   if (typeof window === "undefined") {
-    return "light";
+    return null;
   }
 
   const savedTheme = window.localStorage.getItem("theme");
@@ -14,9 +14,21 @@ function getPreferredTheme(): Theme {
     return savedTheme;
   }
 
+  return null;
+}
+
+function getPreferredTheme(): Theme {
+  if (typeof window === "undefined") {
+    return "light";
+  }
+
   return window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light";
+}
+
+function applyTheme(theme: Theme) {
+  document.documentElement.classList.toggle("dark", theme === "dark");
 }
 
 export default function ThemeToggle() {
@@ -24,17 +36,15 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    const isDark = document.documentElement.classList.contains("dark");
-    const preferredTheme = isDark ? "dark" : getPreferredTheme();
-    document.documentElement.classList.toggle("dark", preferredTheme === "dark");
-    setTheme(preferredTheme);
+    const resolvedTheme = getStoredTheme() ?? getPreferredTheme();
+    applyTheme(resolvedTheme);
+    setTheme(resolvedTheme);
     setMounted(true);
   }, []);
 
   const toggleTheme = () => {
-    const currentlyDark = document.documentElement.classList.contains("dark");
-    const nextTheme: Theme = currentlyDark ? "light" : "dark";
-    document.documentElement.classList.toggle("dark", nextTheme === "dark");
+    const nextTheme: Theme = theme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
     try {
       window.localStorage.setItem("theme", nextTheme);
     } catch {
@@ -47,10 +57,10 @@ export default function ThemeToggle() {
     return (
       <button
         type="button"
-        className="rounded-full border border-ink/15 bg-white/80 px-4 py-2 text-sm font-semibold text-ink dark:bg-ink/10"
+        className="rounded-full border border-ink/15 bg-white/80 px-4 py-2 text-sm font-semibold text-ink transition hover:border-ocean hover:text-ocean dark:bg-ink/10 dark:text-white"
         aria-label="Toggle dark mode"
       >
-        Theme
+        Dark mode
       </button>
     );
   }
