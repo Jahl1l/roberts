@@ -13,7 +13,7 @@ export default function CustomerLogoCard({
 }: CustomerLogoCardProps) {
   return (
     <div className="group flex w-fit max-w-full flex-col items-center">
-      <div className="rounded-[26px] border border-ink/10 bg-white/95 p-3 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
+      <div className="rounded-[26px] border border-ink/10 bg-white/95 px-3 pb-3 pt-5 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
         <div className="overflow-hidden rounded-[18px]">
           <Image
             src={logoSrc}
